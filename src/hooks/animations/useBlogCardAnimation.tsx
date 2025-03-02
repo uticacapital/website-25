@@ -13,11 +13,9 @@ export const useBlogCardAnimation = (
         gsap.fromTo(
           card,
           {
-            opacity: 0,
             y: 50,
           },
           {
-            opacity: 1,
             y: 0,
             duration: 1,
             ease: "power4.out",
