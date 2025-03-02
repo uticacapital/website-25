@@ -181,12 +181,6 @@ const App: React.FC = () => {
           onMouseLeave={() =>
             resetButtonAnimation(animatePreviousBgImageRef.current!)
           }
-          onTouchStart={() =>
-            animateScalingOutRoundButtons(animatePreviousBgImageRef.current!)
-          }
-          onTouchEnd={() =>
-            resetButtonAnimation(animatePreviousBgImageRef.current!)
-          }
           ref={animatePreviousBgImageRef}
         >
           <FaArrowLeftLong color="#6bc328" size={24} />
@@ -200,12 +194,6 @@ const App: React.FC = () => {
             animateScalingOutRoundButtons(animateNextBgImageRef.current!)
           }
           onMouseLeave={() =>
-            resetButtonAnimation(animateNextBgImageRef.current!)
-          }
-          onTouchStart={() =>
-            animateScalingOutRoundButtons(animateNextBgImageRef.current!)
-          }
-          onTouchEnd={() =>
             resetButtonAnimation(animateNextBgImageRef.current!)
           }
           ref={animateNextBgImageRef}
@@ -267,18 +255,6 @@ const App: React.FC = () => {
                         )
                       }
                       onMouseLeave={() =>
-                        resetButtonAnimation(
-                          animateServiceButtonRefs.current[index]!,
-                          "#fff"
-                        )
-                      }
-                      onTouchStart={() =>
-                        animateScalingOutRoundButtons(
-                          animateServiceButtonRefs.current[index]!,
-                          "#fff"
-                        )
-                      }
-                      onTouchEnd={() =>
                         resetButtonAnimation(
                           animateServiceButtonRefs.current[index]!,
                           "#fff"
