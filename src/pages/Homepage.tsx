@@ -19,6 +19,8 @@ const images = [BgImage, BgImage2];
 const App: React.FC = () => {
   const navigate = useNavigate();
   const animateServiceSectionRef = React.useRef<HTMLDivElement>(null);
+  const animateYoutubeSectionRef = React.useRef<HTMLDivElement>(null);
+  const animateBlogSectionRef = React.useRef<HTMLDivElement>(null);
   const imageCoverRef = React.useRef<HTMLDivElement>(null);
   const animateNextAndPrevButtonRef = React.useRef<HTMLDivElement>(null);
   const animateNextBgImageRef = React.useRef<HTMLButtonElement>(null);
@@ -65,6 +67,53 @@ const App: React.FC = () => {
   }, []);
 
   useServiceAnimation(serviceCardRefs);
+
+  React.useEffect(() => {
+    const youtubeAndBlogSectionTimeline = gsap.timeline({ duration: 0.6 });
+    youtubeAndBlogSectionTimeline
+      .fromTo(
+        animateYoutubeSectionRef.current,
+        {
+          opacity: 0.6,
+          y: 70,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power4.out",
+          scrollTrigger: {
+            trigger: animateYoutubeSectionRef.current,
+            start: "top 95%",
+            end: "bottom 75%",
+            toggleActions: "play none none reverse",
+            once: true,
+            scrub: 1,
+          },
+        }
+      )
+      .fromTo(
+        animateBlogSectionRef.current,
+        {
+          opacity: 0.7,
+          y: 50,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power4.out",
+          scrollTrigger: {
+            trigger: animateBlogSectionRef.current,
+            start: "top 95%",
+            end: "bottom 75%",
+            toggleActions: "play none none reverse",
+            once: true,
+            scrub: 1,
+          },
+        }
+      );
+  }, []);
 
   useBlogCardAnimation(blogCardRefs);
 
@@ -247,7 +296,10 @@ const App: React.FC = () => {
       </section>
 
       {/* Youtube video section */}
-      <section className="w-full grid lg:grid-cols-2 gap-10 mt-8 py-3 lg:py-8 place-items-center">
+      <section
+        ref={animateYoutubeSectionRef}
+        className="w-full grid lg:grid-cols-2 gap-10 mt-8 py-3 lg:py-16 place-items-center"
+      >
         <p className="w-full text-lg md:text-2xl xl:text-3xl text-uticaBlue text-center lg:text-start">
           Watch our video
         </p>
@@ -267,7 +319,10 @@ const App: React.FC = () => {
       </section>
 
       {/* blog section */}
-      <section className="w-full flex flex-col gap-8 mt-8 bg-white rounded-2xl py-6 sm:py-12 px-3.5 sm:px-8">
+      <section
+        ref={animateBlogSectionRef}
+        className="w-full flex flex-col gap-8 mt-8 bg-white rounded-2xl py-6 sm:py-12 px-3.5 sm:px-8"
+      >
         <div className="flex justify-between place-items-center mb-3">
           <p className="text-lg md:text-2xl xl:text-3xl text-uticaBlue">
             Recent blog post
