@@ -174,6 +174,7 @@ const App: React.FC = () => {
         <button
           className="border-2 border-uticaGreen scale-[0.8] text-white h-12 w-12 flex justify-center place-items-center rounded-full"
           onClick={previousBgImage}
+          aria-label="Previous background image"
           onMouseEnter={() =>
             animateScalingOutRoundButtons(animatePreviousBgImageRef.current!)
           }
@@ -194,6 +195,7 @@ const App: React.FC = () => {
         <button
           className="border-2 border-uticaGreen scale-[0.8] text-white h-12 w-12 flex justify-center place-items-center rounded-full"
           onClick={nextBgImage}
+          aria-label="Next background image"
           onMouseEnter={() =>
             animateScalingOutRoundButtons(animateNextBgImageRef.current!)
           }
@@ -253,6 +255,7 @@ const App: React.FC = () => {
                   <div className="w-full flex justify-end">
                     <button
                       className="border-2 border-white scale-[0.8] text-white h-12 w-12 md:h-14 md:w-14 flex justify-center place-items-center rounded-full"
+                      aria-label="Read more about our services"
                       onClick={() => {
                         nextBgImage();
                         navigate(serviceListItem.link);
