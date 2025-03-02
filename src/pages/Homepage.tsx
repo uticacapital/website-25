@@ -162,6 +162,7 @@ const App: React.FC = () => {
           <FaArrowRightLong color="#6bc328" size={24} />
         </button>
       </div>
+
       {/* Services Section */}
       <section
         ref={animateServiceSectionRef}
@@ -244,6 +245,27 @@ const App: React.FC = () => {
           })}
         </section>
       </section>
+
+      {/* Youtube video section */}
+      <section className="w-full grid lg:grid-cols-2 gap-10 mt-8 py-3 lg:py-8 place-items-center">
+        <p className="w-full text-lg md:text-2xl xl:text-3xl text-uticaBlue text-center lg:text-start">
+          Watch our video
+        </p>
+
+        <div className="w-full max-w-3xl bg-white rounded-2xl p-4 overflow-hidden">
+          <div className="relative w-full h-0 pb-[56.25%] rounded-xl overflow-hidden">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full rounded-2xl"
+              src="https://www.youtube.com/embed/QaMDCTFc7I0?si=xI3T5sAhA0QKWWxp"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
       {/* blog section */}
       <section className="w-full flex flex-col gap-8 mt-8 bg-white rounded-2xl py-6 sm:py-12 px-3.5 sm:px-8">
         <div className="flex justify-between place-items-center mb-3">
