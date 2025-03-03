@@ -73,7 +73,7 @@ const CareerPage: React.FC = () => {
         ref={joinUsRef}
       >
         <div className="w-full h-full flex flex-col items-center justify-center p-6 rounded-2xl">
-          <h1 className="text-4xl font-bold text-center">
+          <h1 className="text-3xl sm:text-5xl font-bold text-center">
             Join Our Team at Utica Capital
           </h1>
           <p className="mt-3 text-lg text-center">
@@ -126,7 +126,7 @@ const CareerPage: React.FC = () => {
 
       {/* job posting section */}
       <div className="w-full h-full flex flex-col gap-4 mt-26 text-center">
-        <p className="text-uticaBlue text-5xl">
+        <p className="text-uticaBlue text-3xl sm:text-5xl">
           Are you innovative and impact-driven?
         </p>
         <p className="text-black font-[500]">
@@ -136,7 +136,7 @@ const CareerPage: React.FC = () => {
         </p>
       </div>
 
-      <ul className="job-postings w-full h-full grid grid-cols-1 gap-4 mt-10">
+      <ul className="job-postings w-full h-full grid grid-cols-1 gap-4 mt-10 mb-20">
         {jobPostings.map((jobPosting, index) => (
           <li
             key={index}
