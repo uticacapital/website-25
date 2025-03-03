@@ -29,3 +29,28 @@ export type SocialMediaLink = {
   icon: React.ReactNode;
   link: string;
 };
+
+export type JobPosting = {
+  title: string;
+  author: string;
+  published_on: string;
+  published_in: string;
+  expired_on: string;
+  job_summary: string;
+  job_details: {
+    responsibilities: string[];
+  };
+  required_qualifications: {
+    education: string;
+    certifications: string;
+  };
+  job_factors: {
+    knowledge: string[];
+    abilities: string[];
+    key_working_relationships: string[];
+  };
+  compensation: string;
+  job_category: string;
+  job_type: string;
+  job_location: string;
+};

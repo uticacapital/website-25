@@ -1,9 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 import App from "./App";
 import { Helmet } from "react-helmet";
 
 const HomePage = lazy(() => import("./pages/Homepage"));
+const CareerPage = lazy(() => import("./pages/CareerPage"));
 // const BlogPage = lazy(() => import("./pages/BlogPage"));
 // const AboutPage = lazy(() => import("./pages/AboutPage"));
 // const ContactPage = lazy(() => import("./pages/ContactPage"));
@@ -15,6 +16,12 @@ const routes = [
     title: "Your trusted partner in financial solutions - Utica Capital",
     description:
       "Welcome to Utica Capital, your trusted partner in financial solutions.",
+  },
+  {
+    path: "careers",
+    element: <CareerPage />,
+    title: "Careers - Utica Capital",
+    description: "Join Utica Capital and be part of our growing team.",
   },
   // {
   //   path: "blog",
@@ -43,13 +50,15 @@ const router = createBrowserRouter([
     children: routes.map(({ path, element, title, description }) => ({
       path,
       element: (
-        <Suspense fallback={<div>Loading...</div>}>
+        // <Suspense fallback={<div>Loading...</div>}>
+        <>
           <Helmet>
             <title>{title}</title>
             <meta name="description" content={description} />
           </Helmet>
           {element}
-        </Suspense>
+        </>
+        // </Suspense>
       ),
     })),
   },

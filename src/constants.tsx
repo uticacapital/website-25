@@ -4,6 +4,7 @@ import {
   ServiceList,
   BlogList,
   SocialMediaLink,
+  JobPosting,
 } from "./types";
 import PortFolioAdvisoryImage from "./assets/PortfMgt-899x1024.webp";
 import AssetManagementImage from "./assets/AssetMgt-1-899x1024.webp";
@@ -257,6 +258,147 @@ const productLinks: NavLink[] = [
   },
 ];
 
+const jobPostings: JobPosting[] = [
+  {
+    title: "Compliance Officer",
+    author: "UticaAdmin",
+    published_on: "May 8, 2024",
+    published_in: "Job Listings",
+    expired_on: "May 31, 2024",
+    job_summary:
+      "Individually accountable for establishing a compliance framework; including Risk Management and Monitoring plan. Initiates and facilitates corrective action where required. Prepare and submit all regulatory reports to prevent penalties.",
+    job_details: {
+      responsibilities: [
+        "Conduct risk assessments and develop and implement compliance policies and procedures to ensure adherence to SEC guidelines and other applicable laws and regulations.",
+        "Develop, implement and deliver training programs for employees to ensure awareness and adherence to compliance policies and procedures.",
+        "Provide guidance and advice to management and employees on compliance matters, including regulatory requirements and best practices.",
+        "Monitor and assess the effectiveness of the firm’s compliance program, and make recommendations for improvements as necessary.",
+        "Stay up-to-date on regulatory developments and industry trends, and communicate relevant information to management and employees.",
+        "Conduct compliance audits and reviews, and provide reports to management and regulatory authorities.",
+        "Collaborate with legal, risk management and audit teams to ensure the effective management of regulatory and compliance risks.",
+        "Investigate compliance issues, and recommend corrective action to ensure adherence to SEC guidelines and other relevant regulations.",
+      ],
+    },
+    required_qualifications: {
+      education: "Bachelor’s degree in business, finance, or related field.",
+      certifications: "Must be a registered SEC-Sponsored individual.",
+    },
+    job_factors: {
+      knowledge: [
+        "Minimum of 3 years of relevant experience in a compliance role within an asset management firm or related industry.",
+        "In-depth knowledge of SEC regulations and guidelines.",
+      ],
+      abilities: [
+        "Excellent communication.",
+        "Proven problem-solving skills.",
+        "Strong analytical skills.",
+      ],
+      key_working_relationships: [
+        "Managing Director",
+        "Internal Control Officer",
+        "Securities and Exchange Commission",
+      ],
+    },
+    compensation:
+      "We offer a highly competitive salary package for this position to ensure that our employees are fairly compensated for their work and dedication.",
+    job_category: "Compliance",
+    job_type: "Full Time",
+    job_location: "Ikoyi, Lagos",
+  },
+  {
+    title: "Compliance Officer",
+    author: "UticaAdmin",
+    published_on: "May 8, 2024",
+    published_in: "Job Listings",
+    expired_on: "May 31, 2024",
+    job_summary:
+      "Individually accountable for establishing a compliance framework; including Risk Management and Monitoring plan. Initiates and facilitates corrective action where required. Prepare and submit all regulatory reports to prevent penalties.",
+    job_details: {
+      responsibilities: [
+        "Conduct risk assessments and develop and implement compliance policies and procedures to ensure adherence to SEC guidelines and other applicable laws and regulations.",
+        "Develop, implement and deliver training programs for employees to ensure awareness and adherence to compliance policies and procedures.",
+        "Provide guidance and advice to management and employees on compliance matters, including regulatory requirements and best practices.",
+        "Monitor and assess the effectiveness of the firm’s compliance program, and make recommendations for improvements as necessary.",
+        "Stay up-to-date on regulatory developments and industry trends, and communicate relevant information to management and employees.",
+        "Conduct compliance audits and reviews, and provide reports to management and regulatory authorities.",
+        "Collaborate with legal, risk management and audit teams to ensure the effective management of regulatory and compliance risks.",
+        "Investigate compliance issues, and recommend corrective action to ensure adherence to SEC guidelines and other relevant regulations.",
+      ],
+    },
+    required_qualifications: {
+      education: "Bachelor’s degree in business, finance, or related field.",
+      certifications: "Must be a registered SEC-Sponsored individual.",
+    },
+    job_factors: {
+      knowledge: [
+        "Minimum of 3 years of relevant experience in a compliance role within an asset management firm or related industry.",
+        "In-depth knowledge of SEC regulations and guidelines.",
+      ],
+      abilities: [
+        "Excellent communication.",
+        "Proven problem-solving skills.",
+        "Strong analytical skills.",
+      ],
+      key_working_relationships: [
+        "Managing Director",
+        "Internal Control Officer",
+        "Securities and Exchange Commission",
+      ],
+    },
+    compensation:
+      "We offer a highly competitive salary package for this position to ensure that our employees are fairly compensated for their work and dedication.",
+    job_category: "Compliance",
+    job_type: "Full Time",
+    job_location: "Ikoyi, Lagos",
+  },
+  {
+    title: "Compliance Officer",
+    author: "UticaAdmin",
+    published_on: "May 8, 2024",
+    published_in: "Job Listings",
+    expired_on: "May 31, 2024",
+    job_summary:
+      "Individually accountable for establishing a compliance framework; including Risk Management and Monitoring plan. Initiates and facilitates corrective action where required. Prepare and submit all regulatory reports to prevent penalties.",
+    job_details: {
+      responsibilities: [
+        "Conduct risk assessments and develop and implement compliance policies and procedures to ensure adherence to SEC guidelines and other applicable laws and regulations.",
+        "Develop, implement and deliver training programs for employees to ensure awareness and adherence to compliance policies and procedures.",
+        "Provide guidance and advice to management and employees on compliance matters, including regulatory requirements and best practices.",
+        "Monitor and assess the effectiveness of the firm’s compliance program, and make recommendations for improvements as necessary.",
+        "Stay up-to-date on regulatory developments and industry trends, and communicate relevant information to management and employees.",
+        "Conduct compliance audits and reviews, and provide reports to management and regulatory authorities.",
+        "Collaborate with legal, risk management and audit teams to ensure the effective management of regulatory and compliance risks.",
+        "Investigate compliance issues, and recommend corrective action to ensure adherence to SEC guidelines and other relevant regulations.",
+      ],
+    },
+    required_qualifications: {
+      education: "Bachelor’s degree in business, finance, or related field.",
+      certifications: "Must be a registered SEC-Sponsored individual.",
+    },
+    job_factors: {
+      knowledge: [
+        "Minimum of 3 years of relevant experience in a compliance role within an asset management firm or related industry.",
+        "In-depth knowledge of SEC regulations and guidelines.",
+      ],
+      abilities: [
+        "Excellent communication.",
+        "Proven problem-solving skills.",
+        "Strong analytical skills.",
+      ],
+      key_working_relationships: [
+        "Managing Director",
+        "Internal Control Officer",
+        "Securities and Exchange Commission",
+      ],
+    },
+    compensation:
+      "We offer a highly competitive salary package for this position to ensure that our employees are fairly compensated for their work and dedication.",
+    job_category: "Compliance",
+    job_type: "Full Time",
+    job_location: "Ikoyi, Lagos",
+  },
+];
+
 export {
   footerLinks,
   socialMediaLinks,
@@ -264,4 +406,5 @@ export {
   blogLists,
   navLinks,
   productLinks,
+  jobPostings,
 };
