@@ -1,31 +1,7 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
-import { FaRegCompass } from "react-icons/fa";
-import { TbWorld } from "react-icons/tb";
+import { coreValues } from "../constants";
 
-type CoreValue = {
-  id: string;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-};
-
-const coreValues: CoreValue[] = [
-  {
-    id: "vision",
-    title: "Our Vision",
-    description:
-      "To build a better future for our stakeholders; one investment at a time.",
-    icon: <FaRegCompass size={28} />,
-  },
-  {
-    id: "mission",
-    title: "Our Mission",
-    description:
-      "To cultivate sustainable growth by prioritizing people, nurturing the environment, and maximizing profitability.",
-    icon: <TbWorld size={28} />,
-  },
-];
 const AboutPage: React.FC = () => {
   const rotateIconRef = React.useRef<(HTMLDivElement | null)[]>([]);
   const moveTextRef = React.useRef<(HTMLDivElement | null)[]>([]);

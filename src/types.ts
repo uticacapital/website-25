@@ -54,3 +54,10 @@ export type JobPosting = {
   job_type: string;
   job_location: string;
 };
+
+export type CoreValue = {
+  id: string;
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+};

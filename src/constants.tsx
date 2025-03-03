@@ -5,6 +5,7 @@ import {
   BlogList,
   SocialMediaLink,
   JobPosting,
+  CoreValue,
 } from "./types";
 import PortFolioAdvisoryImage from "./assets/PortfMgt-899x1024.webp";
 import AssetManagementImage from "./assets/AssetMgt-1-899x1024.webp";
@@ -21,9 +22,11 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaYoutube,
+  FaRegCompass,
 } from "react-icons/fa";
 import { PiCaretDownBold } from "react-icons/pi";
 import { MdOutlineSavings } from "react-icons/md";
+import { TbWorld } from "react-icons/tb";
 
 const footerLinks: { [key: string]: FooterLink[] } = {
   Company: [
@@ -399,6 +402,23 @@ const jobPostings: JobPosting[] = [
   },
 ];
 
+const coreValues: CoreValue[] = [
+  {
+    id: "vision",
+    title: "Our Vision",
+    description:
+      "To build a better future for our stakeholders; one investment at a time.",
+    icon: <FaRegCompass size={28} />,
+  },
+  {
+    id: "mission",
+    title: "Our Mission",
+    description:
+      "To cultivate sustainable growth by prioritizing people, nurturing the environment, and maximizing profitability.",
+    icon: <TbWorld size={28} />,
+  },
+];
+
 export {
   footerLinks,
   socialMediaLinks,
@@ -407,4 +427,5 @@ export {
   navLinks,
   productLinks,
   jobPostings,
+  coreValues,
 };
