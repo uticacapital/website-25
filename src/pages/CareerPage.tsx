@@ -149,10 +149,10 @@ const CareerPage: React.FC = () => {
               <div className="w-full h-full flex justify-between sm:flex-col sm:gap-8">
                 <h2>{jobPosting.title}</h2>
                 <div className="h-full grid grid-cols-1 justify-between place-items-end sm:flex sm:justify-start gap-2 text-xs ">
-                  <p className="sm:bg-uticaBlue sm:text-white sm:px-4 sm:rounded-full">
+                  <p className="sm:bg-uticaBlue sm:text-white sm:px-4 sm:py-0.5 sm:rounded-full">
                     {jobPosting.job_location}
                   </p>
-                  <p className="sm:bg-uticaBlue sm:text-white sm:px-4 sm:rounded-full">
+                  <p className="sm:bg-uticaBlue sm:text-white sm:px-4 sm:py-0.5 sm:rounded-full">
                     {jobPosting.job_type}
                   </p>
                 </div>
