@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 const HomePage = lazy(() => import("./pages/Homepage"));
 const CareerPage = lazy(() => import("./pages/CareerPage"));
 // const BlogPage = lazy(() => import("./pages/BlogPage"));
-// const AboutPage = lazy(() => import("./pages/AboutPage"));
+const AboutPage = lazy(() => import("./pages/AboutPage"));
 // const ContactPage = lazy(() => import("./pages/ContactPage"));
 
 const routes = [
@@ -29,12 +29,13 @@ const routes = [
   //   title: "Blog - Latest Insights | Utica Capital",
   //   description: "Read the latest insights and updates from Utica Capital's experts.",
   // },
-  // {
-  //   path: "about",
-  //   element: <AboutPage />,
-  //   title: "About Us - Utica Capital",
-  //   description: "Learn more about Utica Capital and our mission to provide excellent financial services.",
-  // },
+  {
+    path: "about",
+    element: <AboutPage />,
+    title: "About Us - Utica Capital",
+    description:
+      "Learn more about Utica Capital and our mission to provide excellent financial services.",
+  },
   // {
   //   path: "contact",
   //   element: <ContactPage />,
