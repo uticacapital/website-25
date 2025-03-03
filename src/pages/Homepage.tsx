@@ -87,7 +87,6 @@ const App: React.FC = () => {
             start: "top 95%",
             end: "bottom 75%",
             toggleActions: "play none none reverse",
-            once: true,
             scrub: 1,
           },
         }
@@ -108,7 +107,6 @@ const App: React.FC = () => {
             start: "top 95%",
             end: "bottom 75%",
             toggleActions: "play none none reverse",
-            once: true,
             scrub: 1,
           },
         }
