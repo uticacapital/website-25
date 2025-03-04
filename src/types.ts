@@ -61,3 +61,12 @@ export type CoreValue = {
   description: string;
   icon: React.ReactNode;
 };
+
+export type BoardMember = {
+  id: string;
+  name: string;
+  title: string;
+  image: React.ReactNode;
+  description: string[];
+  linkedin: string;
+};

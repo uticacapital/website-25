@@ -21,3 +21,12 @@
   --color-uticaGray: #3d4e5f;
   --color-uticaBgGray: #f2f7f8;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

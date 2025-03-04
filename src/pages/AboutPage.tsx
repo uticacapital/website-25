@@ -1,12 +1,35 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { coreValues } from "../constants";
+import { IoClose } from "react-icons/io5";
+import { boardMembers } from "../constants";
+import { BoardMember } from "../types";
+import { FaLinkedin } from "react-icons/fa";
 
 const AboutPage: React.FC = () => {
   const rotateIconRef = React.useRef<(HTMLDivElement | null)[]>([]);
   const moveTextRef = React.useRef<(HTMLDivElement | null)[]>([]);
   const aboutUsRef = React.useRef<HTMLDivElement | null>(null);
   const valuesRef = React.useRef<HTMLDivElement | null>(null);
+  const boardMembersRef = React.useRef<HTMLDivElement | null>(null);
+  const [selectedMember, setSelectedMember] =
+    React.useState<BoardMember | null>(null);
+
+  React.useEffect(() => {}, []);
+
+  const openModal = (member: BoardMember) => {
+    setSelectedMember(member);
+  };
+
+  const closeModal = () => {
+    gsap.to(".modal-content", {
+      opacity: 0,
+      y: 100,
+      duration: 0.3,
+      ease: "power3.in",
+      onComplete: () => setSelectedMember(null),
+    });
+  };
 
   useEffect(() => {
     const tl = gsap.timeline({ delay: 0.8, ease: "back.inOut(1.7)" });
@@ -17,26 +40,34 @@ const AboutPage: React.FC = () => {
         opacity: 1,
         y: 0,
       }
-    );
-    tl.fromTo(
-      valuesRef.current,
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.5,
-      },
-      "<0.5"
-    );
+    )
+      .fromTo(
+        valuesRef.current,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+        },
+        "<0.5"
+      )
+      .fromTo(
+        boardMembersRef.current,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+        }
+      );
   }, []);
 
   return (
     <>
       <section ref={aboutUsRef}>
-        <p className="text-uticaBlue text-3xl sm:text-5xl text-center">
+        <p className="text-uticaBlue text-4xl sm:text-5xl text-center">
           About Utica Capital
         </p>
-        <div className="w-full space-y-4 font-[500] mt-8">
+        <div className="w-full space-y-4 font-[500] mt-8 text-base">
           <p>
             Utica Capital Limited is an asset management company, licensed as a
             fund/portfolio management firm by the Securities and Exchange
@@ -124,6 +155,98 @@ const AboutPage: React.FC = () => {
           </div>
         ))}
       </section>
+
+      {/* Board Members Section */}
+      <section ref={boardMembersRef} className="py-8">
+        <p className="text-uticaBlue text-4xl sm:text-5xl text-center font-bold">
+          Our Board of Directors
+        </p>
+
+        {/* Board Members Grid */}
+        <section className="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-12  text-center">
+          {boardMembers.slice(0, 2).map((member) => (
+            <div
+              key={member.id}
+              className="flex flex-col items-center cursor-pointer py-8 bg-white rounded-2xl"
+              onClick={() => openModal(member)}
+            >
+              {member.image}
+              <p className="text-lg font-bold mt-4 text-uticaBlue">
+                {member.name}
+              </p>
+              <p className="text-sm text-black">{member.title}</p>
+            </div>
+          ))}
+        </section>
+        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-12  text-center">
+          {boardMembers.slice(2).map((member) => (
+            <div
+              key={member.id}
+              className="flex flex-col items-center cursor-pointer py-8 bg-white rounded-2xl"
+              onClick={() => openModal(member)}
+            >
+              {member.image}
+              <p className="text-lg font-bold mt-4 text-uticaBlue">
+                {member.name}
+              </p>
+              <p className="text-sm text-black">{member.title}</p>
+            </div>
+          ))}
+        </section>
+      </section>
+
+      {/* Board of Directors Modal */}
+      {selectedMember && (
+        <div
+          style={{
+            backdropFilter: "blur(4px)",
+          }}
+          className="fixed inset-0 flex items-center justify-center bg-[#1616161A] z-50"
+          onClick={closeModal}
+        >
+          <div
+            className="modal-content bg-white w-[90%] sm:w-[50%] h-[70%]  overflow-y-scroll no-scrollbar pb-16 rounded-lg shadow-lg relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <div className="sticky top-0 bg-white py-4 pr-2 w-full flex justify-end">
+              <button onClick={closeModal}>
+                <IoClose size={30} />
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <div className=" flex flex-col px-8">
+              {selectedMember.image}
+              <div className="flex place-items-end gap-2">
+                <h2 className="text-2xl font-bold text-uticaBlue mt-4 ">
+                  {selectedMember.name}
+                </h2>
+                <a
+                  href={selectedMember.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mb-1.5"
+                >
+                  <FaLinkedin size={18} color="#01225a" />
+                </a>
+              </div>
+
+              <p className="text-base">{selectedMember.title}</p>
+              <div className="mb-4 mt-2">
+                {selectedMember.description.map((desc, index) => (
+                  <p
+                    key={index}
+                    className="text-black font-[500] text-base mt-3 leading-7"
+                  >
+                    {desc}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
