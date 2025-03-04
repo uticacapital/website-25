@@ -15,8 +15,6 @@ const AboutPage: React.FC = () => {
   const [selectedMember, setSelectedMember] =
     React.useState<BoardMember | null>(null);
 
-  React.useEffect(() => {}, []);
-
   const openModal = (member: BoardMember) => {
     setSelectedMember(member);
   };
