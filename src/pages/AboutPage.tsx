@@ -167,7 +167,7 @@ const AboutPage: React.FC = () => {
           {boardMembers.slice(0, 2).map((member) => (
             <div
               key={member.id}
-              className="flex flex-col items-center cursor-pointer py-8 bg-white rounded-2xl"
+              className="flex flex-col items-center cursor-pointer py-8 bg-white rounded-2xl hover:scale-105 transition-transform duration-300 delay-200 ease-in-out"
               onClick={() => openModal(member)}
             >
               {member.image}
@@ -182,7 +182,7 @@ const AboutPage: React.FC = () => {
           {boardMembers.slice(2).map((member) => (
             <div
               key={member.id}
-              className="flex flex-col items-center cursor-pointer py-8 bg-white rounded-2xl"
+              className="flex flex-col items-center cursor-pointer py-8 bg-white rounded-2xl hover:scale-105 transition-transform duration-300 delay-200 ease-in-out"
               onClick={() => openModal(member)}
             >
               {member.image}
