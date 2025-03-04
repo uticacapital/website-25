@@ -49,10 +49,10 @@ const footerLinks: { [key: string]: FooterLink[] } = {
     { name: "Impact Investment", link: "/impact-investment" },
   ],
   Services: [
-    { name: "Portfolio Advisory", link: "/portfolio-advisory" },
-    { name: "Asset Management", link: "/asset-management" },
-    { name: "Wealth Management", link: "/wealth-management" },
-    { name: "Fund Management", link: "/fund-management" },
+    { name: "Portfolio Advisory", link: "/our-services/portfolio-advisory" },
+    { name: "Asset Management", link: "/our-services/asset-management" },
+    { name: "Wealth Management", link: "/our-services/wealth-management" },
+    { name: "Fund Management", link: "/our-services/fund-management" },
   ],
   Resources: [
     { name: "Client Login", link: "/about" },
@@ -84,7 +84,7 @@ const serviceLists: ServiceList[] = [
     name: "Portfolio Advisory",
     description:
       "This service is designed to address your specific interests and objectives with a portfolio-based approach, drawing from the entire universe of investment opportunities.",
-    link: "/portfolio-advisory",
+    link: "/our-services/portfolio-advisory",
     image: (
       <img
         src={PortFolioAdvisoryImage}
@@ -97,7 +97,7 @@ const serviceLists: ServiceList[] = [
     name: "Asset Management",
     description:
       "Our Asset Management team delivers top-of-the-line investment management services to our clients. We also provide innovative structured solutions for specific needs.",
-    link: "/asset-management",
+    link: "/our-services/asset-management",
     image: (
       <img
         src={AssetManagementImage}
@@ -110,7 +110,7 @@ const serviceLists: ServiceList[] = [
     name: "Wealth Management",
     description:
       "We aim to meet your diverse financial needs by providing unique, wide and varying services to ensure we support your financial goals through wealth securitization.",
-    link: "/wealth-management",
+    link: "/our-services/wealth-management",
     image: (
       <img
         src={WealthManagementImage}
@@ -123,7 +123,7 @@ const serviceLists: ServiceList[] = [
     name: "Fund Management",
     description:
       "We work to understand your specific needs, offering a range of investment products and services across various asset classes and sectors.",
-    link: "/fund-management",
+    link: "/our-services/fund-management",
     image: (
       <img
         src={FundManagementImage}

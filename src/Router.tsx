@@ -7,6 +7,7 @@ const HomePage = lazy(() => import("./pages/Homepage"));
 const CareerPage = lazy(() => import("./pages/CareerPage"));
 // const BlogPage = lazy(() => import("./pages/BlogPage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
+const ServicesPage = lazy(() => import("./pages/Services"));
 // const ContactPage = lazy(() => import("./pages/ContactPage"));
 
 const routes = [
@@ -35,6 +36,13 @@ const routes = [
     title: "About Us - Utica Capital",
     description:
       "Learn more about Utica Capital and our mission to provide excellent financial services.",
+  },
+  {
+    path: "our-services/:serviceId",
+    element: <ServicesPage />,
+    title: "Discover the range of financial services we offer - Utica Capital",
+    description:
+      "Discover the range of financial services we offer at Utica Capital",
   },
   // {
   //   path: "contact",
